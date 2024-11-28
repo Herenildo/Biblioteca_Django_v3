@@ -1,9 +1,9 @@
 # biblioteca-django-v2
 Sistema de gerenciamento de biblioteca com Class-Based Views (CBVs), paginação e busca.
 
-## Componentes da Dupla
+## C
 
-- Thales Henrique Paixão Silva Santos
+
 - Herenildo Da Cruz Dos Santos
 
 
@@ -23,4 +23,4 @@ Este projeto foi desenvolvido como parte da trilha Back-End com Python, utilizan
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/ThalesHenriquePaixao/biblioteca-django-v2.git
+   git clone https://github.com/ThalesHenriquePaixao/biblioteca-django-v3.git
