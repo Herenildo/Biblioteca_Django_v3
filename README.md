@@ -1,7 +1,7 @@
 # biblioteca-django-v2
 Sistema de gerenciamento de biblioteca com Class-Based Views (CBVs), paginação e busca.
 
-## C
+## 
 
 
 - Herenildo Da Cruz Dos Santos
