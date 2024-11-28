@@ -15,3 +15,17 @@ class LivroSerializer(serializers.ModelSerializer):
     class Meta:
         model = Livro
         fields = '__all__'
+
+
+class ColecaoSerializer(serializers.HyperlinkedModelSerializer):
+    livros = serializers.SlugRelatedField(
+        many=True,
+        queryset=Livro.objects.all(),
+        slug_field='titulo'
+    )
+    colecionador = serializers.ReadOnlyField(source='colecionador.username')
+
+    class Meta:
+        model = Colecao
+        fields = ('url', 'id', 'nome', 'descricao', 'colecionador', 'livros')
+

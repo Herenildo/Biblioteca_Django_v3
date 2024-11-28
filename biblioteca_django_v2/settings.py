@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'core',
+    'rest_framework.authtoken',
+    'drf_spectacular',
+    'corsheaders',
+
 ]
 
 REST_FRAMEWORK = {
@@ -50,17 +54,28 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',  
     'PAGE_SIZE': 5,  
+     "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.TokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ),
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
+CORS_ALLOWED_ORIGINS = [
+    "http://192.168.1.100",
+]
+
 
 ROOT_URLCONF = 'biblioteca_django_v2.urls'
 
