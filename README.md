@@ -1,4 +1,4 @@
-# biblioteca-django-v2
+# biblioteca-django-v3
 Sistema de gerenciamento de biblioteca com Class-Based Views (CBVs), paginação e busca.
 
 ## 
